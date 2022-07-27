@@ -1,0 +1,220 @@
+<div class="pizza-doce">
+  <div id="pizza-doce" class="id-rastreador-pizza-doce"></div>
+  <div class="title-container">Pizzas Doces </div>
+  <div class="pizza-especial-expanded" *ngIf="showMorePizzas===false" (click)="changeShowMorePizzas()">
+    <div class="title-container">
+      <div class="expanded-menu-off">
+         [Ver Mais
+         <svg class="svg-custom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="rgb(128, 104, 27)"><path d="M374.6 310.6l-160 160C208.4 476.9 200.2 480 192 480s-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 370.8V64c0-17.69 14.33-31.1 31.1-31.1S224 46.31 224 64v306.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0S387.1 298.1 374.6 310.6z" />
+      </svg>
+         ]
+    </div>
+  </div>
+  </div>
+  <div class="pizza-especial-expanded" *ngIf="showMorePizzas===true" (click)="changeShowMorePizzas()">
+    <div class="title-container">
+      <div class="expanded-menu-off">
+        [Ver Menos
+        <svg class="svg-custom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="rgb(128, 104, 27)"><path d="M374.6 246.6C368.4 252.9 360.2 256 352 256s-16.38-3.125-22.62-9.375L224 141.3V448c0 17.69-14.33 31.1-31.1 31.1S160 465.7 160 448V141.3L54.63 246.6c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0l160 160C387.1 213.9 387.1 234.1 374.6 246.6z" />
+        </svg>
+        ]
+      </div>
+    </div>
+  </div>
+  <div class="containerImages">
+    <div class="image-left">
+      <div class="content-card">
+        <div class="title-content-card">Pizza Banana com Nutela</div>
+        <div class="borderLine-card"></div>
+        <div class="circle-image">
+          <img class="image-manipulation" src="../assets/images/pizza.png" />
+        </div>
+        <div class="borderLine-card-bottom">
+          <div class="borderLine-card"></div>
+        </div>
+        <div class="ingredientes-container" >
+          <div id="render-price-21">
+            <div class="ingredientes" >Ingredientes</div>
+            <div class="ingredientes-list" >
+              <div>Queijo</div>
+              <div>Banana com Canela</div>
+              <div></div>
+              <div class="ver-preco">[Ver Preço]</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="image-center">
+      <div class="content-card">
+        <div class="title-content-card">Pizza de Chocolate Branco com Nutela</div>
+        <div class="borderLine-card"></div>
+        <div class="circle-image">
+          <img class="image-manipulation" src="../assets/images/pizza.png" />
+        </div>
+        <div class="borderLine-card-bottom">
+          <div class="borderLine-card"></div>
+        </div>
+        <div class="ingredientes-container" >
+          <div id="render-price-22">
+            <div class="ingredientes" >Ingredientes</div>
+            <div class="ingredientes-list" >
+              <div>Queijo</div>
+              <div>Chocolate Branco</div>
+              <div>Nutela</div>
+              <div class="ver-preco">[Ver Preço]</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="image-right">
+      <div class="content-card">
+        <div class="title-content-card">Pizza Chocolate Branco com Nozes</div>
+        <div class="borderLine-card"></div>
+        <div class="circle-image">
+          <img class="image-manipulation" src="../assets/images/pizza.png" />
+        </div>
+        <div class="borderLine-card-bottom">
+          <div class="borderLine-card"></div>
+        </div>
+        <div class="ingredientes-container" >
+          <div id="render-price-23">
+            <div class="ingredientes" >Ingredientes</div>
+            <div class="ingredientes-list" >
+              <div>Queijo</div>
+              <div>Chocolate Branco</div>
+              <div>Nozes</div>
+              <div class="ver-preco">[Ver Preço]</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="pizza-especial-expanded" *ngIf="showMorePizzas===false" (click)="changeShowMorePizzas()">
+  <div class="title-container">
+    <div class="expanded-menu-off">
+       [Ver Mais
+       <svg class="svg-custom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="rgb(128, 104, 27)"><path d="M374.6 310.6l-160 160C208.4 476.9 200.2 480 192 480s-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 370.8V64c0-17.69 14.33-31.1 31.1-31.1S224 46.31 224 64v306.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0S387.1 298.1 374.6 310.6z" />
+    </svg>
+       ]
+  </div>
+</div>
+</div>
+<div class="pizza-especial-expanded" *ngIf="showMorePizzas===true" (click)="changeShowMorePizzas()">
+
+  <div class="containerImages">
+    <div class="image-left">
+      <div class="content-card">
+        <div class="title-content-card">Pizza Banana com Nutela</div>
+        <div class="borderLine-card"></div>
+        <div class="circle-image">
+          <img class="image-manipulation" src="../assets/images/pizza.png" />
+        </div>
+        <div class="borderLine-card-bottom">
+          <div class="borderLine-card"></div>
+        </div>
+        <div class="ingredientes-container" >
+          <div *ngIf="showPrice21===false" (click)="showPriceIngredient(21)">
+            <div class="ingredientes" >Ingredientes</div>
+            <div class="ingredientes-list" >
+              <div>Queijo</div>
+              <div>Banana com Canela</div>
+              <div></div>
+              <div class="ver-preco">[Ver Preço]</div>
+            </div>
+          </div>
+          <div *ngIf="showPrice21===true" (click)="showPriceIngredient(21)" class="ingredientes-container" >
+            <div class="ingredientes" >Preço</div>
+            <div class="ingredientes-list" >
+              <div>De</div>
+              <div class="promocao-pizza">R$ 45,00</div>
+              <div>Por</div>
+              <div>R$ 35,00</div>
+              <div class="ver-preco">[Ver Ingredientes]</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="image-center">
+      <div class="content-card">
+        <div class="title-content-card">Pizza de Chocolate Branco com Nutela</div>
+        <div class="borderLine-card"></div>
+        <div class="circle-image">
+          <img class="image-manipulation" src="../assets/images/pizza.png" />
+        </div>
+        <div class="borderLine-card-bottom">
+          <div class="borderLine-card"></div>
+        </div>
+        <div class="ingredientes-container" >
+          <div *ngIf="showPrice22===false" (click)="showPriceIngredient(22)">
+            <div class="ingredientes" >Ingredientes</div>
+            <div class="ingredientes-list" >
+              <div>Queijo</div>
+              <div>Banana com Canela</div>
+              <div></div>
+              <div class="ver-preco">[Ver Preço]</div>
+            </div>
+          </div>
+          <div *ngIf="showPrice22===true" (click)="showPriceIngredient(22)" class="ingredientes-container" >
+            <div class="ingredientes" >Preço</div>
+            <div class="ingredientes-list" >
+              <div>De</div>
+              <div class="promocao-pizza">R$ 45,00</div>
+              <div>Por</div>
+              <div>R$ 35,00</div>
+              <div class="ver-preco">[Ver Ingredientes]</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="image-right">
+      <div class="content-card">
+        <div class="title-content-card">Pizza Chocolate Branco com Nozes</div>
+        <div class="borderLine-card"></div>
+        <div class="circle-image">
+          <img class="image-manipulation" src="../assets/images/pizza.png" />
+        </div>
+        <div class="borderLine-card-bottom">
+          <div class="borderLine-card"></div>
+        </div>
+        <div class="ingredientes-container" >
+          <div *ngIf="showPrice23===false" (click)="showPriceIngredient(23)">
+            <div class="ingredientes" >Ingredientes</div>
+            <div class="ingredientes-list" >
+              <div>Queijo</div>
+              <div>Banana com Canela</div>
+              <div></div>
+              <div class="ver-preco">[Ver Preço]</div>
+            </div>
+          </div>
+          <div *ngIf="showPrice23===true" (click)="showPriceIngredient(23)" class="ingredientes-container" >
+            <div class="ingredientes" >Preço</div>
+            <div class="ingredientes-list" >
+              <div>De</div>
+              <div class="promocao-pizza">R$ 45,00</div>
+              <div>Por</div>
+              <div>R$ 35,00</div>
+              <div class="ver-preco">[Ver Ingredientes]</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="title-container">
+    <div class="expanded-menu-off">
+      [Ver Menos
+      <svg class="svg-custom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="rgb(128, 104, 27)"><path d="M374.6 246.6C368.4 252.9 360.2 256 352 256s-16.38-3.125-22.62-9.375L224 141.3V448c0 17.69-14.33 31.1-31.1 31.1S160 465.7 160 448V141.3L54.63 246.6c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0l160 160C387.1 213.9 387.1 234.1 374.6 246.6z" />
+      </svg>
+      ]
+    </div>
+  </div>
+
+</div>
+

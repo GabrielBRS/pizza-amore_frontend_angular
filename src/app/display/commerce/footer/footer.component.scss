@@ -1,0 +1,62 @@
+.footerContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  align-content: center;
+  margin-top: 90px;
+
+  .title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      align-self: center;
+      justify-content: center;
+      align-content: center;
+      font-size: 48px;
+      font-weight: 700;
+  }
+
+  .borderLine {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      align-self: center;
+      justify-content: center;
+      align-content: center;
+      height: 5px;
+      width: 45px;
+      background-color: rgb(25, 83, 19);
+      border-radius: 5px;
+      margin-bottom: 21px;
+  }
+
+  .title-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      align-self: center;
+      align-content: center;
+      font-family: "Parisienne";
+      font-size: 36px;
+      font-weight: 500;
+      color: rgb(128, 104, 27);
+  }
+
+  #animation-footer{
+      width: 205px;
+      animation: typing 2s steps(10000),
+      blink .5s step-end infinite alternate;
+      white-space: nowrap;
+      overflow: hidden;
+      //border-right: 3px solid;
+  }
+
+  @keyframes typing {
+      from{
+          width: 0;
+      }
+  }
+}

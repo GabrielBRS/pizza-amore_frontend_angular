@@ -1,0 +1,42 @@
+<div class="containerImages">
+  <div class="image-center">
+    <div class="content-card">
+      <div class="title-content-card">{{namePizza}}</div>
+      <div class="borderLine-card"></div>
+      <div class="circle-image">
+        <img class="image-manipulation" src="../assets/images/pizza.png" />
+      </div>
+      <div class="borderLine-card-bottom">
+        <div class="borderLine-card"></div>
+      </div>
+      <div class="ingredientes-container" >
+        <div *ngIf="showPrice===false" (click)="showPriceIngredient()">
+          <div class="ingredientes" >Ingredientes</div>
+          <div class="ingredientes-list" *ngFor="let ingredient of ingredients;" >
+            <div>{{ingredient}}</div>
+          </div>
+          <div class="ver-preco">[Ver Preço]</div>
+        </div>
+        <div *ngIf="showPrice===true" (click)="showPriceIngredient()" class="ingredientes-container" >
+          <div *ngIf="price!=priceWithPromotion">
+            <div class="ingredientes" >Preço</div>
+            <div class="ingredientes-list" >
+              <div>R$ {{price}}</div>
+              <div class="ver-preco">[Ver Ingredientes]</div>
+            </div>
+          </div>
+          <div *ngIf="price===priceWithPromotion">
+            <div class="ingredientes" >Preço</div>
+            <div class="ingredientes-list" >
+              <div>De</div>
+              <div class="promocao-pizza">R$ {{priceWithPromotion}}</div>
+              <div>Por</div>
+              <div>R$ {{price}}</div>
+              <div class="ver-preco">[Ver Ingredientes]</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

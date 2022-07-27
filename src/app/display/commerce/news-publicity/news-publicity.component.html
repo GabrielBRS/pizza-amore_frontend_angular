@@ -1,0 +1,18 @@
+<div class="news-publicity">
+  <div id="news-publicity" class="id-rastreador-news-publicity"></div>
+  <div class="title">{{"Sabores"|translate}}</div>
+  <div class="borderLine flag-green" *ngIf="animationFlagItaly===1"></div>
+  <div class="borderLine flag-white" *ngIf="animationFlagItaly===2"></div>
+  <div class="borderLine flag-red" *ngIf="animationFlagItaly===3"></div>
+  <div class="borderLine flag-italy" *ngIf="animationFlagItaly===4"></div>
+  <div class="title-container">{{"Mais Vendidas"|translate}}</div>
+
+  <div class="container-grid">
+    <div class="display-pizza-grid">
+      <ng-container *ngFor="let pizza of httpResponseClient;" >
+        <app-model-card-pizza [id]="pizza.pizza.id" [namePizza]="pizza.pizza.namePizza" [ingredients]="pizza.pizza.ingredients" [price]="pizza.pizza.price" [priceWithPromotion]="pizza.pizza.priceWithPromotion" ></app-model-card-pizza>
+      </ng-container>
+    </div>
+  </div>
+
+</div>

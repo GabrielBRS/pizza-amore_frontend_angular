@@ -1,0 +1,135 @@
+.news-publicity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  align-content: center;
+  margin-top: 90px;
+
+  .title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      align-self: center;
+      justify-content: center;
+      align-content: center;
+      font-size: 48px;
+      font-weight: 700;
+  }
+
+  .borderLine {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      align-self: center;
+      justify-content: center;
+      align-content: center;
+      height: 5px;
+      width: 45px;
+      border-radius: 5px;
+      margin-bottom: 21px;
+  }
+
+  .flag-green{
+    background-color: green;
+  }
+
+  .flag-white{
+    background-color: white;
+  }
+
+  .flag-red{
+    background-color: red;
+  }
+
+  .flag-italy{
+    background: linear-gradient(90deg, rgba(41,106,48,1) 33%, rgba(255,255,255,1) 34%, rgba(255,255,255,1) 63%, rgba(255,0,0,1) 65%);
+  }
+
+  .title-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      align-self: center;
+      align-content: center;
+      font-family: "Parisienne";
+      font-size: 36px;
+      font-weight: 500;
+      color: rgb(128, 104, 27);
+
+      .expanded-menu-off {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          align-self: center;
+          align-content: center;
+          font-family: "Staatliches";
+          margin-top: 5px;
+          font-size: 16px;
+          font-weight: 500;
+          color: rgb(128, 104, 27);
+          margin-left: 5px;
+
+          svg {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              justify-content: center;
+              align-self: center;
+              align-content: center;
+              margin-left: 2px;
+              margin-right: 2px;
+              height: 14px;
+              width: 14px;
+          }
+      }
+  }
+
+  .container-grid{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    min-width: 0;
+
+    .display-pizza-grid{
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      align-self: center;
+      align-content: center;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  .navbar-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      align-self: center;
+      justify-content: center;
+      flex: 1;
+      height: 50px;
+      min-width: 0;
+
+      .select-arrow {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          align-self: center;
+          justify-content: center;
+
+          width: 55px;
+          height: 55px;
+          border-radius: 30px;
+          background-color: rgb(61, 39, 39);
+          margin-right: 10px;
+          margin-bottom: 25px;
+      }
+  }
+}

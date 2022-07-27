@@ -1,0 +1,586 @@
+.pizza-especial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  align-content: center;
+  margin-top: 90px;
+
+  .id-rastreador-pizza-especial{
+    position: relative;
+    top: -100px;
+  }
+
+  .title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      align-self: center;
+      justify-content: center;
+      align-content: center;
+      font-size: 48px;
+      font-weight: 700;
+  }
+
+  .borderLine {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      align-self: center;
+      justify-content: center;
+      align-content: center;
+      height: 5px;
+      width: 45px;
+      background-color: rgb(25, 83, 19);
+      border-radius: 5px;
+      margin-bottom: 21px;
+  }
+
+  .title-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      align-self: center;
+      align-content: center;
+      font-family: "Parisienne";
+      font-size: 36px;
+      font-weight: 500;
+      color: rgb(128, 104, 27);
+  }
+
+  .containerImages {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      align-self: center;
+      justify-content: center;
+      margin-top: 20px;
+
+      .image-left {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          align-self: center;
+          justify-content: center;
+          border: 1px solid black;
+          border-radius: 10px;
+          margin: 10px;
+
+          .content-card {
+              padding: 10px;
+          }
+
+          .title-content-card {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              align-self: center;
+              justify-content: center;
+              margin-bottom: 10px;
+              font-family: "Oleo Script";
+              font-size: 18px;
+          }
+
+          .borderLine-card {
+              display: flex;
+              flex-direction: row;
+              min-width: 0px;
+              width: 100%;
+              border: 1px solid black;
+              margin-bottom: 5px;
+              border-radius: 10px;
+          }
+
+          .circle-image {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              align-self: center;
+              justify-content: center;
+              align-content: center;
+              width: 300px;
+              height: 300px;
+              border-radius: 150px;
+              background-color: rgb(116, 27, 27);
+
+              .image-manipulation {
+                  display: flex;
+                  flex-direction: row;
+                  align-items: center;
+                  align-self: center;
+                  justify-content: center;
+                  align-content: center;
+                  height: 200px;
+                  width: 200px;
+              }
+          }
+
+          .borderLine-card-bottom {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              align-self: center;
+              justify-content: center;
+              align-content: center;
+              margin-top: 10px;
+              margin-bottom: 5px;
+
+              .borderLine-card {
+                  display: flex;
+                  flex-direction: row;
+                  align-items: center;
+                  align-self: center;
+                  justify-content: center;
+                  align-content: center;
+                  height: 5px;
+                  min-width: 0;
+                  width: 150px;
+                  border-radius: 10px;
+                  background-color: rgb(109, 102, 0);
+                  border: rgb(109, 102, 0);
+              }
+          }
+
+          .ingredientes-container {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              align-self: center;
+              justify-content: center;
+              height: 150px;
+              padding-bottom: 5px;
+              cursor: pointer;
+          }
+
+          .ingredientes {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              align-self: center;
+              justify-content: center;
+              padding-bottom: 15px;
+              font-family: "Playfair Display SC";
+              font-size: 18px;
+              font-weight: 400;
+              letter-spacing: 1px;
+          }
+
+          .ingredientes-list {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              align-self: center;
+              justify-content: center;
+              font-family: "Philosopher";
+
+              .ver-preco {
+                  display: flex;
+                  flex-direction: column;
+                  font-family: "Staatliches";
+                  padding-top: 10px;
+                  font-size: 12px;
+                  font-weight: 500;
+                  color: rgb(128, 104, 27);
+                  padding-left: 5px;
+              }
+
+              .promocao-pizza {
+                  text-decoration: line-through red;
+              }
+          }
+      }
+
+      .image-center {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          align-self: center;
+          justify-content: center;
+          border: 1px solid black;
+          border-radius: 10px;
+          margin: 10px;
+
+          .content-card {
+              padding: 10px;
+          }
+
+          .title-content-card {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              align-self: center;
+              justify-content: center;
+              margin-bottom: 10px;
+              font-family: "Oleo Script";
+              font-size: 18px;
+          }
+
+          .borderLine-card {
+              display: flex;
+              flex-direction: row;
+              min-width: 0px;
+              width: 100%;
+              border: 1px solid black;
+              margin-bottom: 5px;
+              border-radius: 10px;
+          }
+
+          .circle-image {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              align-self: center;
+              justify-content: center;
+              align-content: center;
+              width: 300px;
+              height: 300px;
+              border-radius: 150px;
+              background-color: rgb(116, 27, 27);
+
+              .image-manipulation {
+                  display: flex;
+                  flex-direction: row;
+                  align-items: center;
+                  align-self: center;
+                  justify-content: center;
+                  align-content: center;
+                  height: 200px;
+                  width: 200px;
+              }
+          }
+
+          .borderLine-card-bottom {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              align-self: center;
+              justify-content: center;
+              align-content: center;
+              margin-top: 10px;
+              margin-bottom: 5px;
+
+              .borderLine-card {
+                  display: flex;
+                  flex-direction: row;
+                  align-items: center;
+                  align-self: center;
+                  justify-content: center;
+                  align-content: center;
+                  height: 5px;
+                  min-width: 0;
+                  width: 150px;
+                  border-radius: 10px;
+                  background-color: rgb(109, 102, 0);
+                  border: rgb(109, 102, 0);
+              }
+          }
+
+          .ingredientes-container {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              align-self: center;
+              justify-content: center;
+              height: 150px;
+              padding-bottom: 5px;
+              cursor: pointer;
+          }
+
+          .ingredientes {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              align-self: center;
+              justify-content: center;
+              padding-bottom: 15px;
+              font-family: "Playfair Display SC";
+              font-size: 18px;
+              font-weight: 400;
+              letter-spacing: 1px;
+          }
+
+          .ingredientes-list {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              align-self: center;
+              justify-content: center;
+              font-family: "Philosopher";
+
+              .ver-preco {
+                  display: flex;
+                  flex-direction: column;
+                  font-family: "Staatliches";
+                  padding-top: 10px;
+                  font-size: 12px;
+                  font-weight: 500;
+                  color: rgb(128, 104, 27);
+                  padding-left: 5px;
+              }
+
+              .promocao-pizza {
+                  text-decoration: line-through red;
+              }
+          }
+      }
+
+      .image-right {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          align-self: center;
+          justify-content: center;
+          border: 1px solid black;
+          border-radius: 10px;
+          margin: 10px;
+
+          .content-card {
+              padding: 10px;
+          }
+
+          .title-content-card {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              align-self: center;
+              justify-content: center;
+              margin-bottom: 10px;
+              font-family: "Oleo Script";
+              font-size: 18px;
+          }
+
+          .borderLine-card {
+              display: flex;
+              flex-direction: row;
+              min-width: 0px;
+              width: 100%;
+              border: 1px solid black;
+              margin-bottom: 5px;
+              border-radius: 10px;
+          }
+
+          .circle-image {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              align-self: center;
+              justify-content: center;
+              align-content: center;
+              width: 300px;
+              height: 300px;
+              border-radius: 150px;
+              background-color: rgb(116, 27, 27);
+
+              .image-manipulation {
+                  display: flex;
+                  flex-direction: row;
+                  align-items: center;
+                  align-self: center;
+                  justify-content: center;
+                  align-content: center;
+                  height: 200px;
+                  width: 200px;
+              }
+          }
+
+          .borderLine-card-bottom {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              align-self: center;
+              justify-content: center;
+              align-content: center;
+              margin-top: 10px;
+              margin-bottom: 5px;
+
+              .borderLine-card {
+                  display: flex;
+                  flex-direction: row;
+                  align-items: center;
+                  align-self: center;
+                  justify-content: center;
+                  align-content: center;
+                  height: 5px;
+                  min-width: 0;
+                  width: 150px;
+                  border-radius: 10px;
+                  background-color: rgb(109, 102, 0);
+                  border: rgb(109, 102, 0);
+              }
+          }
+
+          .ingredientes-container {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              align-self: center;
+              justify-content: center;
+              height: 150px;
+              padding-bottom: 5px;
+              cursor: pointer;
+          }
+
+          .ingredientes {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              align-self: center;
+              justify-content: center;
+              padding-bottom: 15px;
+              font-family: "Playfair Display SC";
+              font-size: 18px;
+              font-weight: 400;
+              letter-spacing: 1px;
+          }
+
+          .ingredientes-list {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              align-self: center;
+              justify-content: center;
+              font-family: "Philosopher";
+
+              .ver-preco {
+                  display: flex;
+                  flex-direction: column;
+                  font-family: "Staatliches";
+                  padding-top: 10px;
+                  font-size: 12px;
+                  font-weight: 500;
+                  color: rgb(128, 104, 27);
+                  padding-left: 5px;
+              }
+
+              .promocao-pizza {
+                  text-decoration: line-through red;
+              }
+          }
+      }
+  }
+
+  .navbar-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      align-self: center;
+      justify-content: center;
+      flex: 1;
+      height: 50px;
+      min-width: 0;
+
+      .select-arrow {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          align-self: center;
+          justify-content: center;
+
+          width: 55px;
+          height: 55px;
+          border-radius: 30px;
+          background-color: rgb(61, 39, 39);
+          margin-right: 10px;
+          margin-bottom: 25px;
+      }
+  }
+}
+
+.pizza-especial-expanded{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  align-content: center;
+  font-family: "Staatliches";
+  margin-top: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  color: rgb(128, 104, 27);
+  margin-left: 5px;
+  min-width: 0;
+  cursor: pointer;
+
+  .container-grid{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    min-width: 0;
+
+    .display-pizza-grid{
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      align-self: center;
+      align-content: center;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  .title-container{
+
+    .expanded-menu-off {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      align-self: center;
+      align-content: center;
+      font-family: "Staatliches";
+      margin-top: 5px;
+      font-size: 16px;
+      font-weight: 500;
+      color: rgb(128, 104, 27);
+      margin-left: 5px;
+
+      .svg-custom {
+          display: initial;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          align-self: center;
+          align-content: center;
+          margin-left: 2px;
+          margin-right: 2px;
+          height: 14px;
+          width: 14px;
+      }
+    }
+  }
+
+.navbar-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    flex: 1;
+    height: 50px;
+    min-width: 0;
+
+    .select-arrow {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        align-self: center;
+        justify-content: center;
+
+        width: 55px;
+        height: 55px;
+        border-radius: 30px;
+        background-color: rgb(61, 39, 39);
+        margin-right: 10px;
+        margin-bottom: 25px;
+    }
+}
+
+}
+
+
+
