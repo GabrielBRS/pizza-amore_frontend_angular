@@ -44,9 +44,7 @@ export class NewsPublicityComponent implements OnInit {
  }
 
   animationSelectLang(){
-    //console.log(this.animationFlagItaly)
     this.animationFlagItaly = 1;
-    //console.log(this.animationFlagItaly)
   }
 
 }

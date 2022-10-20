@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-model-card-pizza',
@@ -12,6 +12,7 @@ export class ModelCardPizzaComponent implements OnInit {
   @Input() price:any;
   @Input() priceWithPromotion:any;
   @Input() ingredients:any = [];
+ // @Output() getEventShowPrice = new EventEmitter<string>();
 
   showPrice:boolean=false;
 
@@ -25,5 +26,10 @@ export class ModelCardPizzaComponent implements OnInit {
   showPriceIngredient(){
     this.showPrice = !this.showPrice;
   }
+
+  // getEventShow(value: string) {
+  //   this.getEventShowPrice.emit(value);
+  // }
+
 
 }

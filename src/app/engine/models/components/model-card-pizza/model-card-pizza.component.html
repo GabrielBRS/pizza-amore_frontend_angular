@@ -11,28 +11,28 @@
       </div>
       <div class="ingredientes-container" >
         <div *ngIf="showPrice===false" (click)="showPriceIngredient()">
-          <div class="ingredientes" >Ingredientes</div>
+          <div class="ingredientes" >{{'Ingredientes'|translate}}</div>
           <div class="ingredientes-list" *ngFor="let ingredient of ingredients;" >
             <div>{{ingredient}}</div>
           </div>
-          <div class="ver-preco">[Ver Preço]</div>
+          <div class="ver-preco">[{{'Ver Preço'|translate}}]</div>
         </div>
         <div *ngIf="showPrice===true" (click)="showPriceIngredient()" class="ingredientes-container" >
           <div *ngIf="price!=priceWithPromotion">
-            <div class="ingredientes" >Preço</div>
+            <div class="ingredientes" >{{'Preço'|translate}}</div>
             <div class="ingredientes-list" >
               <div>R$ {{price}}</div>
-              <div class="ver-preco">[Ver Ingredientes]</div>
+              <div class="ver-preco">[{{'Ver Ingredientes'|translate}}]</div>
             </div>
           </div>
           <div *ngIf="price===priceWithPromotion">
-            <div class="ingredientes" >Preço</div>
+            <div class="ingredientes" >{{'Preço'|translate}}</div>
             <div class="ingredientes-list" >
-              <div>De</div>
+              <div>{{"De"|translate}}</div>
               <div class="promocao-pizza">R$ {{priceWithPromotion}}</div>
-              <div>Por</div>
+              <div>{{"Por"|translate}}</div>
               <div>R$ {{price}}</div>
-              <div class="ver-preco">[Ver Ingredientes]</div>
+              <div class="ver-preco">[{{'Ver Ingredientes'|translate}}]</div>
             </div>
           </div>
         </div>

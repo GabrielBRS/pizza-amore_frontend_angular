@@ -14,6 +14,7 @@ import { PizzaDoceModule } from './display/commerce/pizza-doce/pizza-doce.module
 import { PizzaEspecialModule } from './display/commerce/pizza-especial/pizza-especial.module';
 import { PizzaSalgadaModule } from './display/commerce/pizza-salgada/pizza-salgada.module';
 import { WhyUsModule } from './display/commerce/why-us/why-us.module';
+import { PizzaServer } from './engine/services/pizza.service';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,7 @@ import { WhyUsModule } from './display/commerce/why-us/why-us.module';
         }
     }),
   ],
-  providers: [],
+  providers: [PizzaServer],
   bootstrap: [AppComponent]
 })
 export class AppModule {

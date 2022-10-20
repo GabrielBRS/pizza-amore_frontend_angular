@@ -1,7 +1,7 @@
 <div class="pizza-doce">
   <div id="pizza-doce" class="id-rastreador-pizza-doce"></div>
   <div class="title-container">Pizzas Doces </div>
-  <div class="pizza-especial-expanded" *ngIf="showMorePizzas===false" (click)="changeShowMorePizzas()">
+  <div class="pizza-doce-expanded" *ngIf="showMorePizzas===false" (click)="changeShowMorePizzas()">
     <div class="title-container">
       <div class="expanded-menu-off">
          [Ver Mais
@@ -11,7 +11,7 @@
     </div>
   </div>
   </div>
-  <div class="pizza-especial-expanded" *ngIf="showMorePizzas===true" (click)="changeShowMorePizzas()">
+  <div class="pizza-doce-expanded" *ngIf="showMorePizzas===true" (click)="changeShowMorePizzas()">
     <div class="title-container">
       <div class="expanded-menu-off">
         [Ver Menos
@@ -21,79 +21,20 @@
       </div>
     </div>
   </div>
-  <div class="containerImages">
-    <div class="image-left">
-      <div class="content-card">
-        <div class="title-content-card">Pizza Banana com Nutela</div>
-        <div class="borderLine-card"></div>
-        <div class="circle-image">
-          <img class="image-manipulation" src="../assets/images/pizza.png" />
-        </div>
-        <div class="borderLine-card-bottom">
-          <div class="borderLine-card"></div>
-        </div>
-        <div class="ingredientes-container" >
-          <div id="render-price-21">
-            <div class="ingredientes" >Ingredientes</div>
-            <div class="ingredientes-list" >
-              <div>Queijo</div>
-              <div>Banana com Canela</div>
-              <div></div>
-              <div class="ver-preco">[Ver Preço]</div>
-            </div>
-          </div>
-        </div>
-      </div>
+  <div class="container-grid">
+    <div [ngClass]="{'display-pizza-grid-off':showMorePizzas===false}" *ngIf="showMorePizzas===false">
+      <ng-container *ngFor="let pizza of httpResponseClient;" class="show-row" >
+        <app-model-card-pizza class="show-row" *ngIf="pizza.pizzaType===3" [id]="pizza.id" [namePizza]="pizza.namePizza" [ingredients]="pizza.ingredients" [price]="pizza.price" [priceWithPromotion]="pizza.priceWithPromotion" ></app-model-card-pizza>
+      </ng-container>
     </div>
-    <div class="image-center">
-      <div class="content-card">
-        <div class="title-content-card">Pizza de Chocolate Branco com Nutela</div>
-        <div class="borderLine-card"></div>
-        <div class="circle-image">
-          <img class="image-manipulation" src="../assets/images/pizza.png" />
-        </div>
-        <div class="borderLine-card-bottom">
-          <div class="borderLine-card"></div>
-        </div>
-        <div class="ingredientes-container" >
-          <div id="render-price-22">
-            <div class="ingredientes" >Ingredientes</div>
-            <div class="ingredientes-list" >
-              <div>Queijo</div>
-              <div>Chocolate Branco</div>
-              <div>Nutela</div>
-              <div class="ver-preco">[Ver Preço]</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="image-right">
-      <div class="content-card">
-        <div class="title-content-card">Pizza Chocolate Branco com Nozes</div>
-        <div class="borderLine-card"></div>
-        <div class="circle-image">
-          <img class="image-manipulation" src="../assets/images/pizza.png" />
-        </div>
-        <div class="borderLine-card-bottom">
-          <div class="borderLine-card"></div>
-        </div>
-        <div class="ingredientes-container" >
-          <div id="render-price-23">
-            <div class="ingredientes" >Ingredientes</div>
-            <div class="ingredientes-list" >
-              <div>Queijo</div>
-              <div>Chocolate Branco</div>
-              <div>Nozes</div>
-              <div class="ver-preco">[Ver Preço]</div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div [ngClass]="{'display-pizza-grid-all':showMorePizzas===true}" *ngIf="showMorePizzas===true">
+      <ng-container *ngFor="let pizza of httpResponseClient;" class="show-row" >
+        <app-model-card-pizza class="show-row" *ngIf="pizza.pizzaType===3" [id]="pizza.id" [namePizza]="pizza.namePizza" [ingredients]="pizza.ingredients" [price]="pizza.price" [priceWithPromotion]="pizza.priceWithPromotion" ></app-model-card-pizza>
+      </ng-container>
     </div>
   </div>
 </div>
-<div class="pizza-especial-expanded" *ngIf="showMorePizzas===false" (click)="changeShowMorePizzas()">
+<div class="pizza-doce-expanded" *ngIf="showMorePizzas===false" (click)="changeShowMorePizzas()">
   <div class="title-container">
     <div class="expanded-menu-off">
        [Ver Mais
@@ -103,109 +44,15 @@
   </div>
 </div>
 </div>
-<div class="pizza-especial-expanded" *ngIf="showMorePizzas===true" (click)="changeShowMorePizzas()">
+<div class="pizza-doce-expanded" *ngIf="showMorePizzas===true" (click)="changeShowMorePizzas()">
 
-  <div class="containerImages">
-    <div class="image-left">
-      <div class="content-card">
-        <div class="title-content-card">Pizza Banana com Nutela</div>
-        <div class="borderLine-card"></div>
-        <div class="circle-image">
-          <img class="image-manipulation" src="../assets/images/pizza.png" />
-        </div>
-        <div class="borderLine-card-bottom">
-          <div class="borderLine-card"></div>
-        </div>
-        <div class="ingredientes-container" >
-          <div *ngIf="showPrice21===false" (click)="showPriceIngredient(21)">
-            <div class="ingredientes" >Ingredientes</div>
-            <div class="ingredientes-list" >
-              <div>Queijo</div>
-              <div>Banana com Canela</div>
-              <div></div>
-              <div class="ver-preco">[Ver Preço]</div>
-            </div>
-          </div>
-          <div *ngIf="showPrice21===true" (click)="showPriceIngredient(21)" class="ingredientes-container" >
-            <div class="ingredientes" >Preço</div>
-            <div class="ingredientes-list" >
-              <div>De</div>
-              <div class="promocao-pizza">R$ 45,00</div>
-              <div>Por</div>
-              <div>R$ 35,00</div>
-              <div class="ver-preco">[Ver Ingredientes]</div>
-            </div>
-          </div>
-        </div>
-      </div>
+  <!-- <div class="container-grid">
+    <div class="display-pizza-grid">
+      <ng-container *ngFor="let pizza of httpResponseClient;" >
+        <app-model-card-pizza [id]="pizza.id" [namePizza]="pizza.namePizza" [ingredients]="pizza.ingredients" [price]="pizza.price" [priceWithPromotion]="pizza.priceWithPromotion" ></app-model-card-pizza>
+      </ng-container>
     </div>
-    <div class="image-center">
-      <div class="content-card">
-        <div class="title-content-card">Pizza de Chocolate Branco com Nutela</div>
-        <div class="borderLine-card"></div>
-        <div class="circle-image">
-          <img class="image-manipulation" src="../assets/images/pizza.png" />
-        </div>
-        <div class="borderLine-card-bottom">
-          <div class="borderLine-card"></div>
-        </div>
-        <div class="ingredientes-container" >
-          <div *ngIf="showPrice22===false" (click)="showPriceIngredient(22)">
-            <div class="ingredientes" >Ingredientes</div>
-            <div class="ingredientes-list" >
-              <div>Queijo</div>
-              <div>Banana com Canela</div>
-              <div></div>
-              <div class="ver-preco">[Ver Preço]</div>
-            </div>
-          </div>
-          <div *ngIf="showPrice22===true" (click)="showPriceIngredient(22)" class="ingredientes-container" >
-            <div class="ingredientes" >Preço</div>
-            <div class="ingredientes-list" >
-              <div>De</div>
-              <div class="promocao-pizza">R$ 45,00</div>
-              <div>Por</div>
-              <div>R$ 35,00</div>
-              <div class="ver-preco">[Ver Ingredientes]</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="image-right">
-      <div class="content-card">
-        <div class="title-content-card">Pizza Chocolate Branco com Nozes</div>
-        <div class="borderLine-card"></div>
-        <div class="circle-image">
-          <img class="image-manipulation" src="../assets/images/pizza.png" />
-        </div>
-        <div class="borderLine-card-bottom">
-          <div class="borderLine-card"></div>
-        </div>
-        <div class="ingredientes-container" >
-          <div *ngIf="showPrice23===false" (click)="showPriceIngredient(23)">
-            <div class="ingredientes" >Ingredientes</div>
-            <div class="ingredientes-list" >
-              <div>Queijo</div>
-              <div>Banana com Canela</div>
-              <div></div>
-              <div class="ver-preco">[Ver Preço]</div>
-            </div>
-          </div>
-          <div *ngIf="showPrice23===true" (click)="showPriceIngredient(23)" class="ingredientes-container" >
-            <div class="ingredientes" >Preço</div>
-            <div class="ingredientes-list" >
-              <div>De</div>
-              <div class="promocao-pizza">R$ 45,00</div>
-              <div>Por</div>
-              <div>R$ 35,00</div>
-              <div class="ver-preco">[Ver Ingredientes]</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  </div> -->
 
   <div class="title-container">
     <div class="expanded-menu-off">
@@ -217,4 +64,3 @@
   </div>
 
 </div>
-

@@ -45,6 +45,17 @@
       color: rgb(128, 104, 27);
   }
 
+  .powered-footer{
+
+    a{
+      text-decoration: none;
+      color: red;
+      &:hover{
+        color: white;
+      }
+    }
+  }
+
   #animation-footer{
       width: 205px;
       animation: typing 2s steps(10000),

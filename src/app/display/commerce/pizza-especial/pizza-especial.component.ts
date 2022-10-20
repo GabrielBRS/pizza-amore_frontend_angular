@@ -1,64 +1,32 @@
 import { Component, OnInit } from '@angular/core';
+import { Pizza } from 'src/app/engine/models/objects/pizza-model';
+import { PizzaServer } from 'src/app/engine/services/pizza.service';
 
 @Component({
   selector: 'app-pizza-especial',
   templateUrl: './pizza-especial.component.html',
-  styleUrls: ['./pizza-especial.component.scss']
+  styleUrls: ['./pizza-especial.component.scss'],
+  providers:[PizzaServer]
 })
 export class PizzaEspecialComponent implements OnInit {
 
-  showPrice21:boolean=false;
-  showPrice22:boolean=false;
-  showPrice23:boolean=false;
-
   showMorePizzas:boolean=false;
-
-  id:any;
 
   httpResponseClient:any;
 
-  constructor() { }
+  constructor(private pizzaService:PizzaServer) { }
 
   ngOnInit() {
-    this.httpResponse();
+    this.getPizzaService();
   }
 
-  httpResponse() {
-    var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open("GET", "http://localhost:8090/pizza/", true);
-    // xmlHttp.responseType = 'json';
-    xmlHttp.send();
-    xmlHttp.onload = ()=> {
-      var response:any = JSON.parse(xmlHttp.response);
-      this.getHttpResponse(response);
-      console.log("News Publicity component "+ response.map((obj:any)=> [obj.id,obj.name]));
-    }
-  }
-
-  getHttpResponse(response:any){
-    this.httpResponseClient = response;
-  }
-
-  showPriceIngredient(id:any){
-    if(id===1){
-      this.showPrice21 = !this.showPrice21;
-      this.id=id;
-    }
-    if(id===2){
-      this.showPrice22 = !this.showPrice22;
-      this.id=id;
-    }
-    if(id===3){
-      this.showPrice23 = !this.showPrice23;
-      this.id=id;
-    }
-
+  getPizzaService(){
+    this.httpResponseClient = this.pizzaService.getHttpResponseCommon().forEach(res=>{
+      this.httpResponseClient = res;
+    });
   }
 
   changeShowMorePizzas(){
     this.showMorePizzas = !this.showMorePizzas;
-    if(this.showMorePizzas===false){
-      document.location.href="http://localhost:4200/#pizza-especial"
-    }
   }
 }

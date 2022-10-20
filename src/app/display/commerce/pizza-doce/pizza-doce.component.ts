@@ -1,44 +1,31 @@
 import { Component, OnInit } from '@angular/core';
+import { PizzaServer } from 'src/app/engine/services/pizza.service';
 
 @Component({
   selector: 'app-pizza-doce',
   templateUrl: './pizza-doce.component.html',
-  styleUrls: ['./pizza-doce.component.scss']
+  styleUrls: ['./pizza-doce.component.scss'],
+  providers:[PizzaServer]
 })
 export class PizzaDoceComponent implements OnInit {
-  showPrice21:boolean=false;
-  showPrice22:boolean=false;
-  showPrice23:boolean=false;
 
   showMorePizzas:boolean=false;
 
-  id:any;
+  httpResponseClient:any;
 
-  constructor() { }
+  constructor(private pizzaService:PizzaServer) { }
 
   ngOnInit() {
+    this.getPizzaService();
   }
 
-  showPriceIngredient(id:any){
-    if(id===21){
-      this.showPrice21 = !this.showPrice21;
-      this.id=id;
-    }
-    if(id===22){
-      this.showPrice22 = !this.showPrice22;
-      this.id=id;
-    }
-    if(id===23){
-      this.showPrice23 = !this.showPrice23;
-      this.id=id;
-    }
-
+  getPizzaService(){
+    this.httpResponseClient = this.pizzaService.getHttpResponseCommon().forEach(res=>{
+      this.httpResponseClient = res;
+    });
   }
 
   changeShowMorePizzas(){
     this.showMorePizzas = !this.showMorePizzas;
-    if(this.showMorePizzas===false){
-      document.location.href="http://localhost:4200/#pizza-doce"
-    }
   }
 }
