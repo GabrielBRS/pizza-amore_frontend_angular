@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -6,14 +7,8 @@ import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ContactModule } from './display/commerce/contact/contact.module';
-import { FooterModule } from './display/commerce/footer/footer.module';
-import { NavbarModule } from './display/commerce/navbar/navbar.module';
-import { NewsPublicityModule } from './display/commerce/news-publicity/news-publicity.module';
-import { PizzaDoceModule } from './display/commerce/pizza-doce/pizza-doce.module';
-import { PizzaEspecialModule } from './display/commerce/pizza-especial/pizza-especial.module';
-import { PizzaSalgadaModule } from './display/commerce/pizza-salgada/pizza-salgada.module';
-import { WhyUsModule } from './display/commerce/why-us/why-us.module';
+import { HomePageModule } from './display/commerce/home-page/home-page.module';
+import { PageNotFoundModule } from './display/page-not-found/page-not-found.module';
 import { PizzaServer } from './engine/services/pizza.service';
 
 @NgModule({
@@ -22,16 +17,14 @@ import { PizzaServer } from './engine/services/pizza.service';
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     AppRoutingModule,
-    NavbarModule,
-    NewsPublicityModule,
-    PizzaEspecialModule,
-    PizzaSalgadaModule,
-    PizzaDoceModule,
-    ContactModule,
-    WhyUsModule,
-    FooterModule,
+    //Services
     HttpClientModule,
+    //Pages
+    HomePageModule,
+    PageNotFoundModule,
+    //Pipes
     TranslateModule.forRoot({
         loader: {
             provide: TranslateLoader,

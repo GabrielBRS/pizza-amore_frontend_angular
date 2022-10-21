@@ -1,0 +1,19 @@
+.navbar-app{
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 90px;
+  background: rgb(0, 0, 0);
+  z-index: 10;
+  //background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(34,121,9,1) 35%, rgba(19,160,115,1) 65%, rgba(172,255,0,1) 100%);
+}
+
+.news-publicity{
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+  margin-top: 90px;
+}
