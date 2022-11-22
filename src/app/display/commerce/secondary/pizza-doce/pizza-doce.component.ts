@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { factoryPizzaObject } from 'src/app/engine/models/objects/factory-pizza-obj';
 import { PizzaServer } from 'src/app/engine/services/pizza.service';
 
 @Component({
@@ -11,7 +12,7 @@ export class PizzaDoceComponent implements OnInit {
 
   showMorePizzas:boolean=false;
 
-  httpResponseClient:any;
+  httpResponseClient:any[] = [];
 
   constructor(private pizzaService:PizzaServer) { }
 
@@ -20,9 +21,11 @@ export class PizzaDoceComponent implements OnInit {
   }
 
   getPizzaService(){
-    this.httpResponseClient = this.pizzaService.getHttpResponseCommon().forEach(res=>{
-      this.httpResponseClient = res;
-    });
+    // this.httpResponseClient = this.pizzaService.getHttpResponseCommon().forEach(res=>{
+    //   this.httpResponseClient = res;
+    // });
+    // this.httpResponseClient.push(factoryPizzaObject(null, "Chocolate", 2, 48.00, 40.00, [{"ingredientes":[{"":"aa"},{"":"ss"}]}]))
+    // this.httpResponseClient.push(factoryPizzaObject(null, "Doce de leite", 2, 48.00, 40.00, [{"ingredientes":"aaa"}]));
   }
 
   changeShowMorePizzas(){

@@ -23,6 +23,11 @@
   </div>
   <div class="container-grid">
     <div [ngClass]="{'display-pizza-grid-off':showMorePizzas===false}" *ngIf="showMorePizzas===false">
+            <!--Provisório apagar depois-->
+            <app-model-card-pizza class="show-row" *ngIf="3" [id]="1" [namePizza]="'Pizza de Nutella'" [ingredients]="['Nutella','Queijo']" [price]="88" [priceWithPromotion]="80" ></app-model-card-pizza>
+            <app-model-card-pizza class="show-row" *ngIf="3" [id]="1" [namePizza]="'Pizza de Cereja com Chocolate'" [ingredients]="['Cereja','Queijo','Chocolate']" [price]="120" [priceWithPromotion]="118" ></app-model-card-pizza>
+            <app-model-card-pizza class="show-row" *ngIf="3" [id]="1" [namePizza]="'Pizza de Churrasco'" [ingredients]="['Chocolate','Queijo']" [price]="100" [priceWithPromotion]="92" ></app-model-card-pizza>
+            <!--Provisório termina aqui-->
       <ng-container *ngFor="let pizza of httpResponseClient;" class="show-row" >
         <app-model-card-pizza class="show-row" *ngIf="pizza.pizzaType===1" [id]="pizza.id" [namePizza]="pizza.namePizza" [ingredients]="pizza.ingredients" [price]="pizza.price" [priceWithPromotion]="pizza.priceWithPromotion" ></app-model-card-pizza>
       </ng-container>
