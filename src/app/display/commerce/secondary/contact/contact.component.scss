@@ -71,7 +71,44 @@
   font-size: 20px;
   font-weight: 400;
   margin-top: 15px;
-  margin-bottom: 30px;
+  margin-bottom: 5px;
+
+  .titulo-horario{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    font-weight: 600;
+    font-family: 'Playfair Display SC';
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+  }
+
+  .dia-funcionamento{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+    font-weight: 500;
+    font-family: 'Staatliches';
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+  }
+
+  .horario-funcionamento{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+    font-weight: 400;
+    font-family: 'Playfair Display SC';
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+  }
 }
 
   .contact-container{
@@ -95,19 +132,33 @@
         padding: 5px;
         text-decoration: none;
 
+        .common-icon{
+          height: 60px;
+          width: 80px;
+        }
+
         .icon-whatsap{
-          height: 30px;
-          width: 30px;
           fill: green;
         }
 
         .icon-instagram{
-          height: 30px;
-          width: 30px;
+          height: 45px;
+          width: 45px;
           fill: purple;
         }
+
+        .icon-ifood{
+
+        }
+
       }
     }
   }
+}
 
+.id-rastreador-contact{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: -100px;
 }
