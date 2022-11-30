@@ -24,7 +24,7 @@ export class ModelCardPizzaComponent implements OnInit {
   }
 
   showPriceIngredient(){
-    this.showPrice = !this.showPrice;
+    //this.showPrice = !this.showPrice;
   }
 
   // getEventShow(value: string) {
