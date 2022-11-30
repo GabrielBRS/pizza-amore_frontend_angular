@@ -104,7 +104,7 @@
         align-items: center;
         align-self: center;
         justify-content: center;
-        height: 150px;
+        height: 200px;
         padding-bottom: 5px;
         cursor: pointer;
 
@@ -164,4 +164,26 @@
         transform:rotate(360deg);
     }
 }
+}
+
+.comprar-agora{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+  font-family: 'Staatliches';
+  color: rgb(85, 11, 11);
+  height: 100%;
+  width: 100%;
+
+  .comprar-link{
+    text-decoration: none;
+    color: rgb(85, 11, 11);
+    &:hover{
+      color: rgb(18, 11, 85);
+    }
+
+  }
 }
