@@ -1,4 +1,7 @@
 <div class="news-publicity">
+  <div class="logo-area">
+    <img class="logo" src="assets/images/nova-logo-pizza-amore.jpeg">
+  </div>
   <div id="sabores" class="id-rastreador-news-publicity"></div>
   <div class="title">{{"Sabores"|translate}}</div>
   <div class="borderLine flag-green" *ngIf="animationFlagItaly===1"></div>
@@ -10,9 +13,9 @@
   <div class="container-grid">
     <div class="display-pizza-grid">
             <!--Provisório apagar depois-->
-            <app-model-card-pizza class="show-row" *ngIf="3" [id]="1" [namePizza]="'Pizza de Portuguesa'" [ingredients]="['Presunto','Queijo','Ovo','Azeitona','Orégano']" [price]="52" [priceWithPromotion]="46" ></app-model-card-pizza>
-            <app-model-card-pizza class="show-row" *ngIf="3" [id]="1" [namePizza]="'Pizza de Calabresa'" [ingredients]="['Calabresa','Queijo','Orégano']" [price]="46" [priceWithPromotion]="42" ></app-model-card-pizza>
-            <app-model-card-pizza class="show-row" *ngIf="3" [id]="1" [namePizza]="'Pizza de Chocolate'" [ingredients]="['Chocolate','Queijo']" [price]="48" [priceWithPromotion]="44" ></app-model-card-pizza>
+            <app-model-card-pizza class="show-row" *ngIf="3" [id]="1" [namePizza]="'Pizza de Frango Catupiry'|translate" [ingredients]="['Presunto'|translate,'Queijo'|translate,'Ovo'|translate,'Azeitona'|translate,'Orégano'|translate]" [price]="52" [priceWithPromotion]="46" ></app-model-card-pizza>
+            <app-model-card-pizza class="show-row" *ngIf="3" [id]="1" [namePizza]="'Pizza de Calabresa'|translate" [ingredients]="['Calabresa'|translate,'Queijo'|translate,'Orégano'|translate]" [price]="46" [priceWithPromotion]="42" ></app-model-card-pizza>
+            <app-model-card-pizza class="show-row" *ngIf="3" [id]="1" [namePizza]="'Pizza de Chocolate'|translate" [ingredients]="['Chocolate'|translate,'Queijo'|translate]" [price]="48" [priceWithPromotion]="44" ></app-model-card-pizza>
             <!--Provisório termina aqui-->
       <ng-container *ngFor="let pizza of httpResponseClient;" >
         <app-model-card-pizza [id]="pizza.pizza.id" [namePizza]="pizza.pizza.namePizza" [ingredients]="pizza.pizza.ingredients" [price]="pizza.pizza.price" [priceWithPromotion]="pizza.pizza.priceWithPromotion" ></app-model-card-pizza>

@@ -5,7 +5,7 @@
   justify-content: center;
   align-self: center;
   align-content: center;
-  margin-top: 90px;
+  margin-top: 40px;
 
   .title {
       display: flex;
@@ -139,4 +139,13 @@
   flex-direction: column;
   position: relative;
   top: -100px;
+}
+
+.logo-area{
+  .logo{
+    border-radius: 180px;
+    width: 250px;
+    height: 250px;
+    margin-bottom: 20px;
+  }
 }

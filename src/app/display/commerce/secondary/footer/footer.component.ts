@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-footer',
@@ -9,7 +10,7 @@ export class FooterComponent implements OnInit {
 
   animationFooterNumber:any = 1;
 
-  constructor() { }
+  constructor(private translate:TranslateService) { }
 
   ngOnInit() {
     this.infinityLoop();
