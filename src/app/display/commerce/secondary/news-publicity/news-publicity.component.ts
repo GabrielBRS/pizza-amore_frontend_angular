@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-news-publicity',
@@ -9,6 +9,8 @@ export class NewsPublicityComponent implements OnInit {
 
   animationFlagItaly:any=1;
   httpResponseClient:any;
+  selectButton:any=1;
+  @Input() DOMNavbar:any;
 
   constructor() { }
 
@@ -45,6 +47,16 @@ export class NewsPublicityComponent implements OnInit {
 
   animationSelectLang(){
     this.animationFlagItaly = 1;
+  }
+
+  chevronIncDec(number:any){
+    this.selectButton = this.selectButton+number;
+    if(this.selectButton<=0){
+      this.selectButton = 1;
+    }
+    if(this.selectButton>=4){
+      this.selectButton = 3;
+    }
   }
 
 }

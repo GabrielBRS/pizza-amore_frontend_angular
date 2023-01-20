@@ -17,3 +17,21 @@
   min-height: 0;
   margin-top: 90px;
 }
+
+
+// @media screen and (max-width:600px) {
+//   ::ng-deep{
+//     app-navbar{
+//       width: 300px !important;
+//       .navbar{
+//         .container-navbar-logo{
+
+//         }
+//         .container-navbar-itens{
+//           width: 20px;
+//           gap:1px;
+//         }
+//       }
+//     }
+//   }
+// }

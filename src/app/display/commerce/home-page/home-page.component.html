@@ -1,14 +1,9 @@
 <div class="navbar-app">
-  <app-navbar style="display: flex; flex-direction: row; min-width: 0; width: 100%;"></app-navbar>
+  <app-navbar [DOMNavbar]="this.DOMNavbar" style="display: flex; flex-direction: row; min-width: 0; width: 100%;"></app-navbar>
 </div>
 <div class="news-publicity">
-  <app-news-publicity></app-news-publicity>
+  <app-news-publicity [DOMNavbar]="this.DOMNavbar"></app-news-publicity>
 </div>
-<!--
-<div class="pizza-especial">
-  <app-pizza-especial></app-pizza-especial>
-</div>
--->
 <div class="pizza-salgada">
   <app-pizza-salgada></app-pizza-salgada>
 </div>

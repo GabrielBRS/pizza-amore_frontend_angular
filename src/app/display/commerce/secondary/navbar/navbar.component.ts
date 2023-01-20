@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Renderer2,} from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -11,9 +11,11 @@ export class NavbarComponent implements OnInit {
   showLang:boolean = false;
   langSelected:any = "Português";
   selectLanguageAnimationNumber:any = 1;
+  @Input() DOMNavbar:any;
 
   constructor(
-    private translate:TranslateService
+    private translate:TranslateService,
+    private renderer:Renderer2
     ) { }
 
   ngOnInit() {
@@ -77,5 +79,9 @@ export class NavbarComponent implements OnInit {
       //    this.booleanOpenSelectedMenu();
       //  }, 1000);
     }
+  }
+
+  openMenu(menu:any){
+    this.DOMNavbar.menu = menu;
   }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -11,6 +11,7 @@ export class ChooseLanguageComponent implements OnInit {
   showLang:boolean = false;
   langSelected:any = "Português";
   selectLanguageAnimationNumber:any = 1;
+  @Input()mobile:any;
 
   constructor(
     private translate:TranslateService

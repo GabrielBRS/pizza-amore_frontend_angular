@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -9,6 +9,7 @@ import { TranslateService } from '@ngx-translate/core';
 export class HomePageComponent implements OnInit {
 
   title = 'pizzaamore_frontend';
+  @Input() DOMNavbar:any;
 
   constructor(private translate: TranslateService) {
     this.translate.setDefaultLang('pt');
