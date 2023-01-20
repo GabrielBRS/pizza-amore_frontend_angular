@@ -1,7 +1,7 @@
 <div class="pizza-doce">
   <div id="pizza-doce" class="id-rastreador-pizza-doce"></div>
   <div class="title-container">{{'Pizzas Doces'|translate}} </div>
-  <div class="pizza-doce-expanded" *ngIf="showMorePizzas===false" (click)="changeShowMorePizzas()">
+  <div class="pizza-doce-expanded" *ngIf="showMorePizzas===false&&this.DOMNavbar.width>=601;" (click)="changeShowMorePizzas()">
     <div class="title-container">
       <div class="expanded-menu-off">
          [{{"Ver Mais"|translate}}
@@ -11,7 +11,7 @@
     </div>
   </div>
   </div>
-  <div class="pizza-doce-expanded" *ngIf="showMorePizzas===true" (click)="changeShowMorePizzas()">
+  <div class="pizza-doce-expanded" *ngIf="showMorePizzas===true&&this.DOMNavbar.width>=601;" (click)="changeShowMorePizzas()">
     <div class="title-container">
       <div class="expanded-menu-off">
         [{{"Ver Menos"|translate}}
@@ -21,7 +21,7 @@
       </div>
     </div>
   </div>
-  <div class="container-grid">
+  <div class="container-grid" *ngIf="this.DOMNavbar.width>=601;">
     <div [ngClass]="{'display-pizza-grid-off':showMorePizzas===false}" *ngIf="showMorePizzas===false">
       <!--Provisório apagar depois-->
       <app-model-card-pizza class="show-row" *ngIf="3" [id]="1" [namePizza]="'Pizza de Chocolate'|translate" [ingredients]="['Chocolate'|translate,'Queijo'|translate]" [price]="48" [priceWithPromotion]="44" ></app-model-card-pizza>
@@ -44,8 +44,33 @@
       <app-model-card-pizza class="show-row" *ngIf="3" [id]="1" [namePizza]="'Pizza de Abacaxi com Chocolate'|translate" [ingredients]="['Abacaxi'|translate,'Queijo'|translate,'Chocolate'|translate]" [price]="46" [priceWithPromotion]="42" ></app-model-card-pizza>
     </div>
   </div>
+  <div class="container-grid" *ngIf="this.DOMNavbar.width<=601;">
+    <div [ngClass]="{'display-pizza-grid-off':showMorePizzas===false}" *ngIf="showMorePizzas===false">
+      <div class="chevron-left common-svg" (click)="chevronIncDec(-1)">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <polygon points="7.293 4.707 14.586 12 7.293 19.293 8.707 20.707 17.414 12 8.707 3.293 7.293 4.707"/>
+        </svg>
+      </div>
+      <!--Provisório apagar depois-->
+      <app-model-card-pizza class="show-row" *ngIf="this.selectButton===1" [id]="1" [namePizza]="'Pizza de Chocolate'|translate" [ingredients]="['Chocolate'|translate,'Queijo'|translate]" [price]="48" [priceWithPromotion]="44" ></app-model-card-pizza>
+      <app-model-card-pizza class="show-row" *ngIf="this.selectButton===2" [id]="1" [namePizza]="'Pizza de Banana'|translate" [ingredients]="['Banana'|translate,'Queijo'|translate,'Canela'|translate]" [price]="49" [priceWithPromotion]="45" ></app-model-card-pizza>
+      <app-model-card-pizza class="show-row" *ngIf="this.selectButton===3" [id]="1" [namePizza]="'Pizza de Doce de Leite'|translate" [ingredients]="['Doce de Leite'|translate,'Queijo'|translate]" [price]="46" [priceWithPromotion]="42" ></app-model-card-pizza>
+      <app-model-card-pizza class="show-row" *ngIf="this.selectButton===4" [id]="1" [namePizza]="'Pizza de Banana com Chocolate'|translate" [ingredients]="['Chocolate'|translate,'Queijo'|translate,'Banana'|translate]" [price]="48" [priceWithPromotion]="44" ></app-model-card-pizza>
+      <app-model-card-pizza class="show-row" *ngIf="this.selectButton===5" [id]="1" [namePizza]="'Pizza de Abacaxi com Banana e Chocolate'|translate" [ingredients]="['Banana'|translate,'Abacaxi'|translate,'Queijo'|translate,'Chocolate'|translate]" [price]="49" [priceWithPromotion]="45" ></app-model-card-pizza>
+      <app-model-card-pizza class="show-row" *ngIf="this.selectButton===6" [id]="1" [namePizza]="'Pizza de Abacaxi com Chocolate'|translate" [ingredients]="['Abacaxi'|translate,'Queijo'|translate,'Chocolate'|translate]" [price]="46" [priceWithPromotion]="42" ></app-model-card-pizza>
+      <!--Provisório termina aqui-->
+      <div class="chevron-right common-svg" (click)="chevronIncDec(+1)">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <polygon points="7.293 4.707 14.586 12 7.293 19.293 8.707 20.707 17.414 12 8.707 3.293 7.293 4.707"/>
+        </svg>
+      </div>
+      <!-- <ng-container *ngFor="let pizza of httpResponseClient;" class="show-row" >
+        <app-model-card-pizza class="show-row" *ngIf="pizza.pizzaType===3" [id]="pizza.id" [namePizza]="pizza.namePizza" [ingredients]="pizza.ingredients" [price]="pizza.price" [priceWithPromotion]="pizza.priceWithPromotion" ></app-model-card-pizza>
+      </ng-container> -->
+    </div>
+  </div>
 </div>
-<div class="pizza-doce-expanded" *ngIf="showMorePizzas===false" (click)="changeShowMorePizzas()">
+<div class="pizza-doce-expanded" *ngIf="showMorePizzas===false&&this.DOMNavbar.width>=601;" (click)="changeShowMorePizzas()">
   <div class="title-container">
     <div class="expanded-menu-off">
        [{{"Ver Mais"|translate}}
@@ -55,7 +80,7 @@
   </div>
 </div>
 </div>
-<div class="pizza-doce-expanded" *ngIf="showMorePizzas===true" (click)="changeShowMorePizzas()">
+<div class="pizza-doce-expanded" *ngIf="showMorePizzas===true&&this.DOMNavbar.width>=601;" (click)="changeShowMorePizzas()">
   <div class="title-container">
     <div class="expanded-menu-off">
       [{{"Ver Menos"|translate}}

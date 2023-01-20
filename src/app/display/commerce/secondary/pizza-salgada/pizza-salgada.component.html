@@ -1,7 +1,7 @@
 <div class="pizza-salgada">
   <div id="pizza-salgada" class="id-rastreador-pizza-salgada"></div>
   <div class="title-container">{{"Pizzas Salgadas"|translate}}</div>
-  <div class="pizza-salgada-expanded" *ngIf="showMorePizzas===false" (click)="changeShowMorePizzas()">
+  <div class="pizza-salgada-expanded" *ngIf="showMorePizzas===false&&this.DOMNavbar.width>=601;" (click)="changeShowMorePizzas()">
     <div class="title-container">
       <div class="expanded-menu-off">
          [{{"Ver Mais"|translate}}
@@ -11,7 +11,7 @@
     </div>
   </div>
   </div>
-  <div class="pizza-salgada-expanded" *ngIf="showMorePizzas===true" (click)="changeShowMorePizzas()">
+  <div class="pizza-salgada-expanded" *ngIf="showMorePizzas===true&&this.DOMNavbar.width>=601;" (click)="changeShowMorePizzas()">
     <div class="title-container">
       <div class="expanded-menu-off">
         [{{"Ver Menos"|translate}}
@@ -21,33 +21,60 @@
       </div>
     </div>
   </div>
-  <div class="container-grid">
+  <div class="container-grid" *ngIf="this.DOMNavbar.width>=601">
     <div [ngClass]="{'display-pizza-grid-off':showMorePizzas===false}" *ngIf="showMorePizzas===false">
             <!--Provisório apagar depois-->
-            <app-model-card-pizza class="show-row" *ngIf="3" [id]="1" [namePizza]="'Pizza de Portuguesa'|translate" [ingredients]="['Presunto'|translate,'Queijo'|translate,'Ovo'|translate,'Azeitona'|translate,'Orégano'|translate]" [price]="52" [priceWithPromotion]="46" ></app-model-card-pizza>
-            <app-model-card-pizza class="show-row" *ngIf="3" [id]="1" [namePizza]="'Pizza de Calabresa'|translate" [ingredients]="['Calabresa'|translate,'Queijo'|translate,'Orégano'|translate]" [price]="46" [priceWithPromotion]="42" ></app-model-card-pizza>
-            <app-model-card-pizza class="show-row" *ngIf="3" [id]="1" [namePizza]="'Pizza de Milho'|translate" [ingredients]="['Milho'|translate,'Queijo'|translate,'Orégano'|translate]" [price]="44" [priceWithPromotion]="40" ></app-model-card-pizza>
+            <app-model-card-pizza class="show-row" *ngIf="1" [id]="1" [namePizza]="'Pizza de Portuguesa'|translate" [ingredients]="['Presunto'|translate,'Queijo'|translate,'Ovo'|translate,'Azeitona'|translate,'Orégano'|translate]" [price]="52" [priceWithPromotion]="46" ></app-model-card-pizza>
+            <app-model-card-pizza class="show-row" *ngIf="1" [id]="1" [namePizza]="'Pizza de Calabresa'|translate" [ingredients]="['Calabresa'|translate,'Queijo'|translate,'Orégano'|translate]" [price]="46" [priceWithPromotion]="42" ></app-model-card-pizza>
+            <app-model-card-pizza class="show-row" *ngIf="1" [id]="1" [namePizza]="'Pizza de Milho'|translate" [ingredients]="['Milho'|translate,'Queijo'|translate,'Orégano'|translate]" [price]="44" [priceWithPromotion]="40" ></app-model-card-pizza>
             <!--Provisório termina aqui-->
-      <ng-container *ngFor="let pizza of httpResponseClient;" class="show-row" >
+      <!-- <ng-container *ngFor="let pizza of httpResponseClient;" class="show-row" >
         <app-model-card-pizza class="show-row" *ngIf="pizza.pizzaType===2" [id]="pizza.id" [namePizza]="pizza.namePizza" [ingredients]="pizza.ingredients" [price]="pizza.price" [priceWithPromotion]="pizza.priceWithPromotion" ></app-model-card-pizza>
-      </ng-container>
+      </ng-container> -->
     </div>
     <div [ngClass]="{'display-pizza-grid-all':showMorePizzas===true}" *ngIf="showMorePizzas===true">
       <!-- <ng-container *ngFor="let pizza of httpResponseClient;" class="show-row" >
         <app-model-card-pizza class="show-row" *ngIf="pizza.pizzaType===2" [id]="pizza.id" [namePizza]="pizza.namePizza" [ingredients]="pizza.ingredients" [price]="pizza.price" [priceWithPromotion]="pizza.priceWithPromotion" ></app-model-card-pizza>
       </ng-container> -->
-      <app-model-card-pizza class="show-row" *ngIf="3" [id]="1" [namePizza]="'Pizza de Portuguesa'|translate" [ingredients]="['Presunto'|translate,'Queijo'|translate,'Ovo'|translate,'Azeitona'|translate,'Orégano'|translate]" [price]="52" [priceWithPromotion]="46" ></app-model-card-pizza>
-      <app-model-card-pizza class="show-row" *ngIf="3" [id]="1" [namePizza]="'Pizza de Calabresa'|translate" [ingredients]="['Calabresa'|translate,'Queijo'|translate,'Orégano'|translate]" [price]="46" [priceWithPromotion]="42" ></app-model-card-pizza>
-      <app-model-card-pizza class="show-row" *ngIf="3" [id]="1" [namePizza]="'Pizza de Milho'|translate" [ingredients]="['Milho'|translate,'Queijo'|translate,'Orégano'|translate]" [price]="44" [priceWithPromotion]="40" ></app-model-card-pizza>
-      <app-model-card-pizza class="show-row" *ngIf="3" [id]="1" [namePizza]="'Pizza de Frango Catupiry'|translate" [ingredients]="['Frango'|translate,'Queijo'|translate,'Catupiry'|translate,'Orégano'|translate]" [price]="52" [priceWithPromotion]="46" ></app-model-card-pizza>
-      <app-model-card-pizza class="show-row" *ngIf="3" [id]="1" [namePizza]="'Pizza de Napolitana'|translate" [ingredients]="['Presunto'|translate,'Queijo'|translate,'Tomate'|translate,'Manjericão'|translate]" [price]="46" [priceWithPromotion]="42" ></app-model-card-pizza>
-      <app-model-card-pizza class="show-row" *ngIf="3" [id]="1" [namePizza]="'Pizza de Bacon'|translate" [ingredients]="['Bacon'|translate,'Queijo'|translate,'Orégano'|translate]" [price]="44" [priceWithPromotion]="40" ></app-model-card-pizza>
-      <app-model-card-pizza class="show-row" *ngIf="3" [id]="1" [namePizza]="'Pizza de Presunto'|translate" [ingredients]="['Presunto'|translate,'Queijo'|translate,'Orégano'|translate]" [price]="52" [priceWithPromotion]="46" ></app-model-card-pizza>
-      <app-model-card-pizza class="show-row" *ngIf="3" [id]="1" [namePizza]="'Pizza de Marguerita'|translate" [ingredients]="['Queijo'|translate,'Manjericão'|translate]" [price]="46" [priceWithPromotion]="42" ></app-model-card-pizza>
+      <app-model-card-pizza class="show-row" *ngIf="1" [id]="1" [namePizza]="'Pizza de Portuguesa'|translate" [ingredients]="['Presunto'|translate,'Queijo'|translate,'Ovo'|translate,'Azeitona'|translate,'Orégano'|translate]" [price]="52" [priceWithPromotion]="46" ></app-model-card-pizza>
+      <app-model-card-pizza class="show-row" *ngIf="1" [id]="1" [namePizza]="'Pizza de Calabresa'|translate" [ingredients]="['Calabresa'|translate,'Queijo'|translate,'Orégano'|translate]" [price]="46" [priceWithPromotion]="42" ></app-model-card-pizza>
+      <app-model-card-pizza class="show-row" *ngIf="1" [id]="1" [namePizza]="'Pizza de Milho'|translate" [ingredients]="['Milho'|translate,'Queijo'|translate,'Orégano'|translate]" [price]="44" [priceWithPromotion]="40" ></app-model-card-pizza>
+      <app-model-card-pizza class="show-row" *ngIf="1" [id]="1" [namePizza]="'Pizza de Frango Catupiry'|translate" [ingredients]="['Frango'|translate,'Queijo'|translate,'Catupiry'|translate,'Orégano'|translate]" [price]="52" [priceWithPromotion]="46" ></app-model-card-pizza>
+      <app-model-card-pizza class="show-row" *ngIf="1" [id]="1" [namePizza]="'Pizza de Napolitana'|translate" [ingredients]="['Presunto'|translate,'Queijo'|translate,'Tomate'|translate,'Manjericão'|translate]" [price]="46" [priceWithPromotion]="42" ></app-model-card-pizza>
+      <app-model-card-pizza class="show-row" *ngIf="1" [id]="1" [namePizza]="'Pizza de Bacon'|translate" [ingredients]="['Bacon'|translate,'Queijo'|translate,'Orégano'|translate]" [price]="44" [priceWithPromotion]="40" ></app-model-card-pizza>
+      <app-model-card-pizza class="show-row" *ngIf="1" [id]="1" [namePizza]="'Pizza de Presunto'|translate" [ingredients]="['Presunto'|translate,'Queijo'|translate,'Orégano'|translate]" [price]="52" [priceWithPromotion]="46" ></app-model-card-pizza>
+      <app-model-card-pizza class="show-row" *ngIf="1" [id]="1" [namePizza]="'Pizza de Marguerita'|translate" [ingredients]="['Queijo'|translate,'Manjericão'|translate]" [price]="46" [priceWithPromotion]="42" ></app-model-card-pizza>
+    </div>
+  </div>
+  <div class="container-grid" *ngIf="this.DOMNavbar.width<=601">
+    <div [ngClass]="{'display-pizza-grid-off':showMorePizzas===false}" *ngIf="showMorePizzas===false">
+            <div class="chevron-left common-svg" (click)="chevronIncDec(-1)">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <polygon points="7.293 4.707 14.586 12 7.293 19.293 8.707 20.707 17.414 12 8.707 3.293 7.293 4.707"/>
+              </svg>
+            </div>
+            <!--Provisório apagar depois-->
+            <app-model-card-pizza class="show-row" *ngIf="this.selectButton===1" [id]="1" [namePizza]="'Pizza de Portuguesa'|translate" [ingredients]="['Presunto'|translate,'Queijo'|translate,'Ovo'|translate,'Azeitona'|translate,'Orégano'|translate]" [price]="52" [priceWithPromotion]="46" ></app-model-card-pizza>
+            <app-model-card-pizza class="show-row" *ngIf="this.selectButton===2" [id]="1" [namePizza]="'Pizza de Calabresa'|translate" [ingredients]="['Calabresa'|translate,'Queijo'|translate,'Orégano'|translate]" [price]="46" [priceWithPromotion]="42" ></app-model-card-pizza>
+            <app-model-card-pizza class="show-row" *ngIf="this.selectButton===3" [id]="1" [namePizza]="'Pizza de Milho'|translate" [ingredients]="['Milho'|translate,'Queijo'|translate,'Orégano'|translate]" [price]="44" [priceWithPromotion]="40" ></app-model-card-pizza>
+            <app-model-card-pizza class="show-row" *ngIf="this.selectButton===4" [id]="1" [namePizza]="'Pizza de Frango Catupiry'|translate" [ingredients]="['Frango'|translate,'Queijo'|translate,'Catupiry'|translate,'Orégano'|translate]" [price]="52" [priceWithPromotion]="46" ></app-model-card-pizza>
+            <app-model-card-pizza class="show-row" *ngIf="this.selectButton===5" [id]="1" [namePizza]="'Pizza de Napolitana'|translate" [ingredients]="['Presunto'|translate,'Queijo'|translate,'Tomate'|translate,'Manjericão'|translate]" [price]="46" [priceWithPromotion]="42" ></app-model-card-pizza>
+            <app-model-card-pizza class="show-row" *ngIf="this.selectButton===6" [id]="1" [namePizza]="'Pizza de Bacon'|translate" [ingredients]="['Bacon'|translate,'Queijo'|translate,'Orégano'|translate]" [price]="44" [priceWithPromotion]="40" ></app-model-card-pizza>
+            <app-model-card-pizza class="show-row" *ngIf="this.selectButton===7" [id]="1" [namePizza]="'Pizza de Presunto'|translate" [ingredients]="['Presunto'|translate,'Queijo'|translate,'Orégano'|translate]" [price]="52" [priceWithPromotion]="46" ></app-model-card-pizza>
+            <app-model-card-pizza class="show-row" *ngIf="this.selectButton===8" [id]="1" [namePizza]="'Pizza de Marguerita'|translate" [ingredients]="['Queijo'|translate,'Manjericão'|translate]" [price]="46" [priceWithPromotion]="42" ></app-model-card-pizza>
+            <!--Provisório termina aqui-->
+            <div class="chevron-right common-svg" (click)="chevronIncDec(+1)">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <polygon points="7.293 4.707 14.586 12 7.293 19.293 8.707 20.707 17.414 12 8.707 3.293 7.293 4.707"/>
+              </svg>
+            </div>
+      <!-- <ng-container *ngFor="let pizza of httpResponseClient;" class="show-row" >
+        <app-model-card-pizza class="show-row" *ngIf="pizza.pizzaType===2" [id]="pizza.id" [namePizza]="pizza.namePizza" [ingredients]="pizza.ingredients" [price]="pizza.price" [priceWithPromotion]="pizza.priceWithPromotion" ></app-model-card-pizza>
+      </ng-container> -->
     </div>
   </div>
 </div>
-<div class="pizza-salgada-expanded" *ngIf="showMorePizzas===false" (click)="changeShowMorePizzas()">
+<div class="pizza-salgada-expanded" *ngIf="showMorePizzas===false&&this.DOMNavbar.width>=601;" (click)="changeShowMorePizzas()">
   <div class="title-container">
     <div class="expanded-menu-off">
        [{{"Ver Mais"|translate}}
@@ -57,7 +84,7 @@
   </div>
 </div>
 </div>
-<div class="pizza-salgada-expanded" *ngIf="showMorePizzas===true" (click)="changeShowMorePizzas()">
+<div class="pizza-salgada-expanded" *ngIf="showMorePizzas===true&&this.DOMNavbar.width>=601;" (click)="changeShowMorePizzas()">
   <div class="title-container">
     <div class="expanded-menu-off">
       [{{"Ver Menos"|translate}}

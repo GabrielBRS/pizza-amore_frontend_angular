@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { factoryPizzaObject } from 'src/app/engine/models/objects/factory-pizza-obj';
 import { PizzaServer } from 'src/app/engine/services/pizza.service';
 
@@ -13,6 +13,9 @@ export class PizzaDoceComponent implements OnInit {
   showMorePizzas:boolean=false;
 
   httpResponseClient:any[] = [];
+
+  selectButton:any=1;
+  @Input() DOMNavbar:any;
 
   constructor(private pizzaService:PizzaServer) { }
 
@@ -30,5 +33,15 @@ export class PizzaDoceComponent implements OnInit {
 
   changeShowMorePizzas(){
     this.showMorePizzas = !this.showMorePizzas;
+  }
+
+  chevronIncDec(number:any){
+    this.selectButton = this.selectButton+number;
+    if(this.selectButton<=0){
+      this.selectButton = 1;
+    }
+    if(this.selectButton>=7){
+      this.selectButton = 6;
+    }
   }
 }

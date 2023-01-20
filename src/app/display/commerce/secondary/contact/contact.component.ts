@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-contact',
@@ -9,10 +9,15 @@ export class ContactComponent implements OnInit {
 
   animationFlagItaly:any=1;
 
+  @Input() DOMNavbar:any;
+  iFrameWidth:any;
+  iFrameHeigth:any;
+
   constructor() { }
 
   ngOnInit() {
     this.infinityLoop();
+    this.setWidthIframe();
   }
 
   infinityLoop(){
@@ -29,5 +34,18 @@ export class ContactComponent implements OnInit {
     //console.log(this.animationFlagItaly)
     this.animationFlagItaly = 1;
     //console.log(this.animationFlagItaly)
+  }
+
+  setWidthIframe(){
+    setInterval(()=>{
+      if(this.DOMNavbar.width>=601){
+        this.iFrameHeigth='450px';
+        this.iFrameWidth='600px';
+      }
+      if(this.DOMNavbar.width<=601){
+        this.iFrameHeigth='300px';
+        this.iFrameWidth='330px';
+      }
+    },100)
   }
 }
