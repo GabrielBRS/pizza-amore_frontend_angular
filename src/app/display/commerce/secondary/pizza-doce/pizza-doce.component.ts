@@ -38,10 +38,10 @@ export class PizzaDoceComponent implements OnInit {
   chevronIncDec(number:any){
     this.selectButton = this.selectButton+number;
     if(this.selectButton<=0){
-      this.selectButton = 1;
+      this.selectButton = 8;
     }
-    if(this.selectButton>=7){
-      this.selectButton = 6;
+    if(this.selectButton>=9){
+      this.selectButton = 1;
     }
   }
 }

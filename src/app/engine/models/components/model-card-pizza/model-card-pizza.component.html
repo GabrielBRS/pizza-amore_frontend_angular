@@ -4,7 +4,13 @@
       <div class="title-content-card">{{namePizza}}</div>
       <div class="borderLine-card"></div>
       <div class="circle-image">
-        <img class="image-manipulation" src="../assets/images/pizza.png" />
+        <div *ngIf="this.expandImageBoolean===false" (click)="setImgBool()">
+          <img class="image-manipulation" [src]="this.img"/>
+        </div>
+        <div *ngIf="this.expandImageBoolean===true" (click)="setImgBool()">
+          <img class="image-manipulation" style="height: 350px; width: 350px; z-index: 10; border-radius: 5px;" [src]="this.img"/>
+        </div>
+        <!-- <img class="image-manipulation" [src]="'../assets/images/pizza.png'" /> -->
       </div>
       <div class="borderLine-card-bottom">
         <div class="borderLine-card"></div>

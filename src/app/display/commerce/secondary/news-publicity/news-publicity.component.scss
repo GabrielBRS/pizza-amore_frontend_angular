@@ -104,6 +104,12 @@
       align-self: center;
       align-content: center;
       grid-template-columns: 1fr 1fr 1fr;
+
+        .video-size{
+          width: 100%;
+          height: 100%;
+        }
+
     }
   }
 

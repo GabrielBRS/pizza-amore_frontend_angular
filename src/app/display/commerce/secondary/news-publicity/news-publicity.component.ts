@@ -52,10 +52,10 @@ export class NewsPublicityComponent implements OnInit {
   chevronIncDec(number:any){
     this.selectButton = this.selectButton+number;
     if(this.selectButton<=0){
-      this.selectButton = 1;
+      this.selectButton = 4;
     }
-    if(this.selectButton>=4){
-      this.selectButton = 3;
+    if(this.selectButton>=5){
+      this.selectButton = 1;
     }
   }
 

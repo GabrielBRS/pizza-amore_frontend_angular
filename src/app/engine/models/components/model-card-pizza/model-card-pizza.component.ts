@@ -7,12 +7,14 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class ModelCardPizzaComponent implements OnInit {
 
+  @Input() img:any;
   @Input() id:any;
   @Input() namePizza:any;
   @Input() price:any;
   @Input() priceWithPromotion:any;
   @Input() ingredients:any = [];
  // @Output() getEventShowPrice = new EventEmitter<string>();
+  expandImageBoolean:boolean = false;
 
   showPrice:boolean=false;
 
@@ -21,6 +23,7 @@ export class ModelCardPizzaComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    // this.setImgBool(false);
   }
 
   showPriceIngredient(){
@@ -31,5 +34,9 @@ export class ModelCardPizzaComponent implements OnInit {
   //   this.getEventShowPrice.emit(value);
   // }
 
+
+  setImgBool(){
+    this.expandImageBoolean = !this.expandImageBoolean;
+  }
 
 }
