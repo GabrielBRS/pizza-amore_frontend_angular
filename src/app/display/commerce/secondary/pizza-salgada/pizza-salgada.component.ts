@@ -35,9 +35,9 @@ export class PizzaSalgadaComponent implements OnInit {
   chevronIncDec(number:any){
     this.selectButton = this.selectButton+number;
     if(this.selectButton<=0){
-      this.selectButton = 15;
+      this.selectButton = 13;
     }
-    if(this.selectButton>=16){
+    if(this.selectButton>=14){
       this.selectButton = 1;
     }
   }
